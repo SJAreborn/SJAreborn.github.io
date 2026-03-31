@@ -45,6 +45,11 @@ header a:hover {
   position: relative;
 }
 
+h1 {
+  font-size: 3em;
+  margin-bottom: 50px;
+}
+
 .hero::before {
   content: "";
   position: absolute;
