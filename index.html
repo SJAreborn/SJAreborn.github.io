@@ -5,21 +5,27 @@
   <title>Reborn Jeju CCA</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .hero {
-      background: none !important; 
-      height: auto; 
-      padding: 100px 0; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .image-container {
+      margin-top: 100px;
+      text-align: center;
     }
-    
-    .hero-img {
-      width: 300px; 
-      border-radius: 12px; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-      margin-bottom: 20px;
+
+    .main-img {
+      display: block;
+      margin: 0 auto 20px;
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #ff6b6b;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
     }
   </style>
 </head>
@@ -31,15 +37,13 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="gallery.html">Gallery</a>
-     
+      <a href="join.html">Join</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <img src="http://www.seogwipo.tv/news/photo/202506/11621_19849_2437.jpg" class="hero-img" alt="제주 이미지">
-      <a href="join.html" class="btn">가입 문의</a>
-    </section>
+  <main class="image-container">
+    <img src="http://www.seogwipo.tv/news/photo/202506/11621_19849_2437.jpg" class="main-img" alt="제주 이미지">
+    <a href="join.html" class="btn">가입 문의</a>
   </main>
 
 </body>
