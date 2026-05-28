@@ -91,7 +91,7 @@ section {
 }
 
 #home {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('cca-pic.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://i.postimg.cc/MT86w4LD/Kakao-Talk-Photo-2026-05-28-20-59-10-002.jpg') no-repeat center center/cover;
     height: 70vh;
     max-width: 100%;
     display: flex;
