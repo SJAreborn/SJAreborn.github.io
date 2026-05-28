@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCA Reborn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Reborn</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home"><span class="ko">홈</span><span class="en">Home</span></a></li>
+                    <li><a href="#about"><span class="ko">소개</span><span class="en">About</span></a></li>
+                    <li><a href="#contact"><span class="ko">문의</span><span class="en">Contact</span></a></li>
+                    <li><button class="lang-btn" onclick="toggleLanguage()">EN</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <h1 class="ko">CCA "Reborn"에 오신 것을 환영합니다</h1>
+        <h1 class="en">Welcome to CCA "Reborn"</h1>
+        <p class="ko">새로운 시작, 우리와 함께 하세요.</p>
+        <p class="en">A fresh start, join our journey.</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="about">
+        <h2 class="section-title">
+            <span class="ko">동아리 소개</span>
+            <span class="en">About Us</span>
+        </h2>
+        <div class="about-grid">
+            <div class="image-gallery">
+                <img src="http://www.seogwipo.tv/news/photo/202506/11621_19849_2437.jpg" alt="Reborn CCA Activity 1" class="about-img">
+                <img src="http://www.seogwipo.tv/news/photo/202506/11621_19849_2437.jpg" alt="Reborn CCA Activity 2" class="about-img">
+            </div>
+            <div class="about-text">
+                <div class="ko">
+                    <h3>저희 "Reborn" 동아리를 소개합니다.</h3>
+                    <br>
+                    <p>[여기에 동아리의 상세한 소개글을 작성해 주세요.]</p>
+                    <p>우리 CCA는 활동을 통해 배우고 함께 성장하는 것을 목표로 합니다. 언제든지 열려있으니 많은 관심 부탁드립니다!</p>
+                </div>
+                <div class="en">
+                    <h3>Introducing our CCA, "Reborn".</h3>
+                    <br>
+                    <p>[Please insert your detailed club description here.]</p>
+                    <p>Our CCA aims to learn and grow together through exciting activities. We are always welcoming new members!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="contact">
+        <h2 class="section-title">
+            <span class="ko">문의하기</span>
+            <span class="en">Contact Us</span>
+        </h2>
+        <div class="contact-container">
+            <form onsubmit="event.preventDefault(); alert('Feature coming soon!');">
+                <div class="form-group">
+                    <label><span class="ko">이름</span><span class="en">Name</span></label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label><span class="ko">이메일</span><span class="en">Email</span></label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label><span class="ko">내용</span><span class="en">Message</span></label>
+                    <textarea rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="ko">보내기</span>
+                    <span class="en">Submit</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CCA Reborn. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let currentLang = 'ko';
+
+        function toggleLanguage() {
+            const koElements = document.querySelectorAll('.ko');
+            const enElements = document.querySelectorAll('.en');
+            const btn = document.querySelector('.lang-btn');
+
+            if (currentLang === 'ko') {
+                koElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'block');
+                btn.textContent = 'KO';
+                currentLang = 'en';
+            } else {
+                koElements.forEach(el => el.style.display = 'block');
+                enElements.forEach(el => el.style.display = 'none');
+                btn.textContent = 'EN';
+                currentLang = 'ko';
+            }
+        }
+    </script>
+</body>
+</html>
