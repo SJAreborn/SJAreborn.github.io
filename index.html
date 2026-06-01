@@ -15,6 +15,7 @@
                 <ul class="nav-links">
                     <li><a href="#home"><span class="ko">홈</span><span class="en">Home</span></a></li>
                     <li><a href="#about"><span class="ko">소개</span><span class="en">About</span></a></li>
+                    <li><a href="#contact"><span class="ko">지원하기</span><span class="en">Apply</span></a></li>
                     <li><button class="lang-btn" onclick="toggleLanguage()">EN</button></li>
                 </ul>
             </nav>
@@ -58,12 +59,61 @@
         </div>
     </section>
 
+    <hr class="section-divider">
+
+    <section id="contact">
+        <h2 class="section-title">
+            <span class="ko">지원 / 문의하기</span>
+            <span class="en">Join Us / Contact</span>
+        </h2>
+        
+        <form action="https://formspree.io/f/xgoqjyvz" method="POST" class="contact-form">
+            
+            <div class="form-group">
+                <label for="name">
+                    <span class="ko">이름</span><span class="en">Name</span>
+                </label>
+                <input type="text" id="name" name="name" required placeholder="홍길동 / John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email">
+                    <span class="ko">이메일 주소</span><span class="en">Email Address</span>
+                </label>
+                <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">
+                    <span class="ko">연락처</span><span class="en">Phone Number</span>
+                </label>
+                <input type="tel" id="phone" name="phone" placeholder="010-1234-5678">
+            </div>
+
+            <div class="form-group">
+                <label for="message">
+                    <span class="ko">인적사항 및 지원동기</span><span class="en">Introduction & Motivation</span>
+                </label>
+                <textarea id="message" name="message" rows="5" required placeholder="내용을 입력해주세요. / Please write here."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <span class="ko">제출하기</span><span class="en">Submit</span>
+            </button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2026 CCA Reborn. All Rights Reserved.</p>
     </footer>
 
     <script>
         let currentLang = 'ko';
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const enElements = document.querySelectorAll('.en');
+            enElements.forEach(el => el.style.display = 'none');
+        });
 
         function toggleLanguage() {
             const koElements = document.querySelectorAll('.ko');
