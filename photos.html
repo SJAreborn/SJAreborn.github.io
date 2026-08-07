@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사진첩 - CCA Reborn</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 사진 페이지 전용 추가 스타일 (필요시) */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .photo-item {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .photo-item:hover {
+      transform: scale(1.03);
+    }
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">Reborn</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">홈</a></li>
+          <li><a href="index.html#about">소개</a></li>
+          <li><a href="index.html#press">기사</a></li>
+          <li><a href="photos.html">사진첩</a></li>
+          <li><a href="index.html#contact">지원하기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="photo-gallery">
+    <h2 class="section-title">활동 사진첩</h2>
+    <p style="text-align: center; color: #666;">리본 동아리의 생생한 활동 현장입니다.</p>
+
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="https://i.postimg.cc/7LjC2mWQ/Kakao-Talk-Photo-2026-05-28-20-59-10-001.jpg" alt="활동사진 1">
+      </div>
+      <div class="photo-item">
+        <img src="https://i.postimg.cc/rmRvNjSh/seukeulinsyas-2026-08-07-ohu-8-40-54.png" alt="활동사진 2">
+      </div>
+      <div class="photo-item">
+        <img src="https://i.postimg.cc/cHDrfsBY/seukeulinsyas-2026-08-07-ohu-8-44-58.png" alt="활동사진 3">
+      </div>
+      <div class="photo-item">
+        <img src="https://i.postimg.cc/W1dSkCNk/seukeulinsyas-2026-08-07-ohu-7-35-12.png" alt="활동사진 4">
+      </div>
+      <div class="photo-item">
+        <img src="https://i.postimg.cc/4N9mH1Cs/seukeulinsyas-2026-08-07-ohu-7-36-32.png" alt="활동사진 5">
+      </div>
+      <div class="photo-item">
+        <img src="https://i.postimg.cc/x8rq6kMQ/seukeulinsyas-2026-08-07-ohu-7-37-36.png" alt="활동사진 6">
+      </div>
+      </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 CCA Reborn. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
