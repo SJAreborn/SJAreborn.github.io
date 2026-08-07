@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCA Reborn</title>
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body.lang-ko .en { display: none !important; }
+        body.lang-en .ko { display: none !important; }
+    </style>
 </head>
-<body>
+<body class="lang-ko">
 
     <header>
         <div class="nav-container">
@@ -224,28 +229,18 @@
     </footer>
 
     <script>
-        let currentLang = 'ko';
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const enElements = document.querySelectorAll('.en');
-            enElements.forEach(el => el.style.display = 'none');
-        });
-
         function toggleLanguage() {
-            const koElements = document.querySelectorAll('.ko');
-            const enElements = document.querySelectorAll('.en');
+            const body = document.body;
             const btn = document.querySelector('.lang-btn');
 
-            if (currentLang === 'ko') {
-                koElements.forEach(el => el.style.display = 'none');
-                enElements.forEach(el => el.style.display = '');
+            if (body.classList.contains('lang-ko')) {
+                body.classList.remove('lang-ko');
+                body.classList.add('lang-en');
                 btn.textContent = 'KO';
-                currentLang = 'en';
             } else {
-                koElements.forEach(el => el.style.display = '');
-                enElements.forEach(el => el.style.display = 'none');
+                body.classList.remove('lang-en');
+                body.classList.add('lang-ko');
                 btn.textContent = 'EN';
-                currentLang = 'ko';
             }
         }
     </script>
