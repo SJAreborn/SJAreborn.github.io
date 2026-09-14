@@ -6,6 +6,50 @@
   <title>CCA Reborn</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* ----- 헤더 및 내비게이션 바 스타일 보완 ----- */
+    header {
+      background-color: #333;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      gap: 15px;
+    }
+
+    .nav-links li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #4CAF50;
+    }
+
+    /* ----- 메인 비주얼 (Home) ----- */
     #home {
       position: relative;
       background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://i.postimg.cc/7hScV9p5/Screenshot-2026-09-14-at-3-20-37-PM.png') no-repeat center center/cover;
@@ -22,6 +66,7 @@
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     }
 
+    /* ----- 언어 전환 버튼 ----- */
     .lang-btn {
       background-color: transparent;
       border: 1px solid #ffffff;
@@ -32,7 +77,8 @@
       font-weight: bold;
       font-size: 14px;
       transition: all 0.3s ease;
-      margin-left: 15px;
+      margin-left: 10px;
+      display: inline-block;
     }
 
     .lang-btn:hover {
@@ -40,6 +86,7 @@
       color: #333333;
     }
 
+    /* ----- 모달 팝업 ----- */
     .modal-overlay {
       display: none;
       position: fixed;
